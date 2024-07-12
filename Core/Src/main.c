@@ -96,15 +96,15 @@ int main(void)
   MX_I2C1_Init();
   /* USER CODE BEGIN 2 */
 
-	hms5611.hi2c = &hi2c1;
-    if (MS5611_Init(&hms5611) == HAL_OK) 
-    	printf("ok");
+  hms5611.hi2c = &hi2c1;
+  if (MS5611_Init(&hms5611) == HAL_OK) 
+  	printf("ok");
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  
+
   while (1)
   {
 	if (MS5611_ReadTemperature(&hms5611, &temperature) == HAL_OK) 
